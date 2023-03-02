@@ -20,25 +20,21 @@ contract ERC20 is Context, IERC20Metadata {
         _symbol = symbol_;
     }
 
-    // 为何加virtual
+    // 为何加virtual?override是因为继承的接口隐式是virtual。virtutal是希望被继承的时候可以重写。
     function name() public view virtual override returns (string memory) {
         return _name;
     }
-    // 为何加virtual
     function symbol() public view virtual override returns (string memory) {
         return _symbol;
     }
-    // 为何加virtual
     function decimals() public view virtual override returns (uint8) {
         return 2;
     }
 
 
-    // 为何加virtual override
     function totalSupply() public view virtual override returns (uint256) {
         return _totalSupply;
     }
-    // 为何加virtual override
     function balanceOf(address account) public view virtual override returns (uint256) {
         return _balances[account];
     }
@@ -64,14 +60,14 @@ contract ERC20 is Context, IERC20Metadata {
         return true;
     }
 
-    // 新增的函数，不属于接口
+    // 新增的函数，不属于接口。ERC20可以新增一些接口。
     function increaseAllowance(address spender, uint256 addedValue) public virtual returns (bool) {
         address owner = _msgSender();
         _approve(owner, spender, allownace(owner, spender) + addedValue);
         return true;
     }
 
-     function decreaseAllowance(address spender, uint256 subtractedValue) public virtual returns (bool) {
+    function decreaseAllowance(address spender, uint256 subtractedValue) public virtual returns (bool) {
         address owner = _msgSender();
         uint256 currentAllowance = allownace(owner, spender);
         require(currentAllowance >= subtractedValue, "ERC20: decreased allowance below zero");
@@ -81,8 +77,7 @@ contract ERC20 is Context, IERC20Metadata {
         return true;
      }
 
-    // 辅助函数
-    // 为何声明virtual
+
     function _transfer(address from, address to, uint256 amount) internal virtual {
         require(from != address(0), "ERC20: transfer from the zero address");
         require(to != address(0), "ERC20: transfer to the zero address");
@@ -98,6 +93,7 @@ contract ERC20 is Context, IERC20Metadata {
 
         _afterTokenTransfer(from, to, amount);
     }
+    
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual {}
     function _afterTokenTransfer(address from, address to, uint256 amount) internal virtual {}
 

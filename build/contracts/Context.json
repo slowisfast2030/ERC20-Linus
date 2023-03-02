@@ -1,7 +1,7 @@
 {
   "contractName": "Context",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Context.sol\":\"Context\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Context.sol\":{\"keccak256\":\"0xfbda9b3d61fc49c9a0d58c5da1549c20fbe70e5c534e7f45b7881ba6fb850619\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://028985f2f6e70e6742d5dcfe9fafe51f07ac602d8ff6606392cc7d26517ca2c7\",\"dweb:/ipfs/QmWEL373EWHanqYKgtkMitXbt1vyN2mGkHxKyzN7dWYj9N\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Context.sol\":\"Context\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Context.sol\":{\"keccak256\":\"0x2484e8451ff4d2f4f9baf9a4d692fa60807ed663b02738ee20c388ea264e2542\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a5d948162e82b8c866d4c61d3dc458e3650104538972cca37ad49f6c4c853d74\",\"dweb:/ipfs/QmNgANtHwysYAShnkcYFYc9MWkDtmgY9swhNU9yR1vviTo\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -9,7 +9,7 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\nabstract contract Context {\n    function _msgSender() internal view virtual returns (address) {\n        return msg.sender;\n    }\n\n    function _msgData() internal view virtual returns (bytes calldata) {\n        return msg.data;\n    }\n}",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\nabstract contract Context {\n    function _msgSender() internal view virtual returns (address) {\n        return msg.sender;\n    }\n\n    function _msgData() internal view virtual returns (bytes calldata) {\n        return msg.data;\n    }\n}\n\n/**\nContracts must be marked as abstract when at least one of their functions is not implemented \nor when they do not provide arguments for all of their base contract constructors. \nEven if this is not the case, a contract may still be marked abstract, \nsuch as when you do not intend for the contract to be created directly. \nAbstract contracts are similar to Interfaces but an interface is more limited in what it can declare.\n*/",
   "sourcePath": "/Users/jinrirencai/Desktop/ico/ERC20-Linus/project/contracts/Context.sol",
   "ast": {
     "absolutePath": "project:/contracts/Context.sol",
@@ -243,7 +243,7 @@
         "usedErrors": []
       }
     ],
-    "src": "33:260:0"
+    "src": "33:693:0"
   },
   "compiler": {
     "name": "solc",
@@ -251,7 +251,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.11",
-  "updatedAt": "2023-03-02T07:36:25.301Z",
+  "updatedAt": "2023-03-02T08:58:57.997Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
